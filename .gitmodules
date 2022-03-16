@@ -4,3 +4,6 @@
 [submodule "zion"]
 	path = zion
 	url = https://github.com/vaimee/zion.git
+[submodule "desmo-dapp"]
+	path = desmo-dapp
+	url = https://github.com/vaimee/desmo-dapp.git
