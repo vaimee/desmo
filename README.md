@@ -8,7 +8,7 @@ The system architecture is divided between an on-chain part, consisting of a set
 - [Oracle DApp](./oracle-dapp.md)
 - [TDD](./tdd.md)
 
-For an overview of the system architecture, please refer to the [architecture diagram](./imgs/architecture.png). 
+For an overview of the system architecture, please refer to the [architecture diagram](./imgs/architecture.jpg). 
 
 ### Acknowledgements
 This project has received funding from the European Union’s Horizon 2020 research and innovation program through the NGI ONTOCHAIN program under cascade funding agreement No 957338
