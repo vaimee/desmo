@@ -4,7 +4,7 @@ The DESMO-LD project aims to provide a fully integrated distributed solution for
 
 # Architecture
 The system architecture is divided between an on-chain part, consisting of a set of smart contracts, and an off-chain part with the Oracle DApp and the Web of Things Thing Description Directory (TDD). The project structure is consequently organized as follows:
-- [Smart Contracts](./smart-contracts.md)
+- [Smart Contracts](./desmo-contracts/README.md)
 - [Oracle DApp](./oracle-dapp.md)
 - [TDD](./tdd.md)
 

@@ -1,0 +1,3 @@
+[submodule "desmo-contracts"]
+	path = desmo-contracts
+	url = https://github.com/vaimee/desmo-contracts.git
