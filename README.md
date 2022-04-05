@@ -4,8 +4,8 @@ The DESMO-LD project aims to provide a fully integrated distributed solution for
 
 # Architecture
 DESMO-LD is a Decentralized Oracle for IoT data powered by WoT technologies. The system architecture is divided between an on-chain part, consisting of a set of smart contracts, and an off-chain part with the Oracle DApp and the Web of Things Thing Description Directory (TDD). The project structure is consequently organized as follows:
-- [Smart Contracts](./desmo-contracts/README.md)
-- [Oracle DApp](./desmo-dapp/README.md)
+- [Smart Contracts](https://github.com/vaimee/desmo-contracts/blob/55cf7b0dec88ca211250b0a95a67a6bcffad89ee/README.md)
+- [Oracle DApp](https://github.com/vaimee/desmo-dapp/blob/bea690443eb16dbc563f6c0c5d3f391d8587038a/README.md)
 - [TDD](./zion/README.md)
 
 For an overview of the system architecture, please refer to the [architecture diagram](./imgs/architecture.jpg).
