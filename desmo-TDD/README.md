@@ -9,4 +9,4 @@ The requirements for joining the network are:
 
 Note that the DESMO-LD TDD will not use the DESMO-LD HUB directly, but its role in the system is bound to DESMO-LD with the registration phase that can be handled automatically or by human interaction.
 
-![desmo-TDD](imgs/desmo-TDD.png)
+![desmo-TDD](https://github.com/vaimee/desmo/blob/a427221c6c98862e94213d9fbfd16f7c4c49e973/desmo-TDD/imgs/desmo%E2%80%93TDD.png)
