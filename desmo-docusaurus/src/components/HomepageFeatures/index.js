@@ -13,7 +13,7 @@ const FeatureList = [
   {
     title: (<>Sponsored by <a href="https://ontochain.ngi.eu/">NGI-ONTOCHAIN</a></>),
     // Svg: require('@site/static/img/logo-ngi-ontochain.svg').default,
-    imgPath:'@site/static/img/logo-ngi-ontochain.png',
+    img:require('@site/static/img/logo-ngi-ontochain.png').default,
     description: (
       <>
       A new software ecosystem for trusted, traceable & transparent ontological knowledge
@@ -22,7 +22,7 @@ const FeatureList = [
   }
 ];
 
-function Feature({Svg, title, description,imgPath}) {
+function Feature({Svg, title, description,img}) {
   if(Svg!==undefined){
     return (
       <div className={clsx('col col--6')}>
@@ -39,7 +39,7 @@ function Feature({Svg, title, description,imgPath}) {
     return (
       <div className={clsx('col col--6')}>
         <div className="text--center">
-          <img src={imgPath} className={styles.featureSvg} style ={{objectFit: "contain"}} role="img" />
+          <img src={img} className={styles.featureSvg} style ={{objectFit: "contain"}} role="img" />
         </div>
         <div className="text--center padding-horiz--md">
           <h3>{title}</h3>
