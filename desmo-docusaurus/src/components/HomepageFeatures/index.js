@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: (<>Developed by <a href="https://vaimee.com/">VAIMEE</a></>),
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/logoVaimee.svg').default,
     description: (
       <>Data-driven composable applications, for everyone, for any kind of data</>
     ),

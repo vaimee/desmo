@@ -1,0 +1,8 @@
+{
+  "label": "DApp details",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn about the Oracle ADpp implementation"
+  }
+}
