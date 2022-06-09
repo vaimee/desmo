@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdesmo_docusaurus=self.webpackChunkdesmo_docusaurus||[]).push([[7719],{8740:function(s){s.exports=JSON.parse('{"permalink":"/desmo/blog/tags/hello","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
