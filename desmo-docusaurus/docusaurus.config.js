@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'DESMO-LD',
   tagline: `The DESMO-LD project aims to provide a fully integrated distributed solution for consuming IoT external data, enriched with Web of Things semantics and data model, inside the ONTOCHAIN. This addresses the ONTOCHAIN call's objectives of designing new trustful decentralized Oracles to poll semantic data from off-chain data sources. Besides, DESMO-LD introduces novel strategies to solve the known interoperability problems thanks to the heavy deployment of standard ontology and semantic oriented consensus algorithms for data quality and trustiness.`,
-  url: 'https://vaimee.com/',
+  url: 'https://vaimee.github.io/desmo/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
