@@ -29,11 +29,11 @@ credentials can be shared without any risk of information leaking.
 [Desmo-DApp](https://github.com/vaimee/desmo-dapp)
 
 **Contents**
-1. [WAM for TDs example management](example-tds/README.md)
-2. [Linksmart Directory for Directories example](linksmart-directory/README.md)
-3. [DApp](DApp/README.md)
-    1. [Consensus algorithm for TDs result](DApp/docs/algorithm.md)
-    2. [Econding result](DApp/docs/encoding.md)
+1. [WAM for TDs example management](WAM.md)
+2. [Linksmart Directory for Directories example](LinksmartDirectory.md)
+3. [DApp](docs/IexecDAPP.md)
+    1. [Consensus algorithm for TDs result](docs/algorithm.md)
+    2. [Econding result](docs/encoding.md)
     3. [UML](docs/uml.md)
 
 
