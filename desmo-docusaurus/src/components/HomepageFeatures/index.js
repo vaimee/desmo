@@ -13,7 +13,7 @@ const FeatureList = [
   {
     title: (<>Sponsored by <a href="https://ontochain.ngi.eu/">NGI-ONTOCHAIN</a></>),
     // Svg: require('@site/static/img/logo-ngi-ontochain.svg').default,
-    imgPath:'/img/logo-ngi-ontochain.png',
+    imgPath:'@site/static/img/logo-ngi-ontochain.png',
     description: (
       <>
       A new software ecosystem for trusted, traceable & transparent ontological knowledge
