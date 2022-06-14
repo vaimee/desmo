@@ -18,7 +18,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Learn more about DESMO-LD - 5min ⏱️
+            Learn more about DESMO-LD - 10min ⏱️
           </Link>
         </div>
       </div>

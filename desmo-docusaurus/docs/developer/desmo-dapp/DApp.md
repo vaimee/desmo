@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 ---
-![DESMO-LD](../imgs/desmo-logo.png)
+![DESMO-LD](../../imgs/desmo-logo.png)
 
 # DESMO-LD Oracle DApp
 
@@ -19,9 +19,9 @@ credentials can be shared without any risk of information leaking.
 
 **System Architecture**
 
-![Architecture](../imgs/dapp_schema.jpg)
+![Architecture](../../imgs/dapp_schema.jpg)
 
-![FlowChart](../imgs/dapp_FlowChart.jpg)
+![FlowChart](../../imgs/dapp_FlowChart.jpg)
 
 [FlowChart link](https://miro.com/app/board/uXjVODIdhHI=/?invite_link_id=916009864260)
 
