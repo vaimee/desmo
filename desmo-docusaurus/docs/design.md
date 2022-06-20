@@ -35,6 +35,7 @@ Regarding the token economics we can identify four players:
 4. Clients; before performing a request, they must make sure they have deposited (allowance) enough tokens on the DESMO-LD address. The protocol will use them to reward the various actors and make the work of the entire network sustainable.
 
 
+
 ![Interaction diagram](./imgs/schema.jpg).
 
 
@@ -70,3 +71,10 @@ The quality of the DESMO-LD software ecosystem will be analyzed according to the
             1. Average Component Dependency
             2. Size of Biggest Cycle Group
     2. Qualitative documentation analysis
+
+
+# Components Specification
+
+In the next sections, there is a high-level description of each component of the architecture, before continue remember the general schema of the architecture and how these components are connected. In general, a request for IoT data is performed using the front-end which will check and finalize it, and then the request will forward to the DESMO-LD Contract. The DESMO-LD Contract will use the DESMO-LD Hub to retrieve access to the Directories. The IoT query is resolved and the result is obtained from the DESMO-LD DApp, which will query the Directories specified in the Contract. Finally, the result is backward and saved in the blockchain.
+
+Continue to the components.

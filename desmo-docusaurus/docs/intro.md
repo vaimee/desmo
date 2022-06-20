@@ -35,10 +35,6 @@ interoperable connection layer with heterogeneous IoT systems and devices;
 - Provide trustable means to induce real world effects thanks to attenuation APIs;
 - Native support for geolocation queries and data.
 
-
-### Acknowledgements
-This project has received funding from the European Union’s Horizon 2020 research and innovation program through the NGI ONTOCHAIN program under cascade funding agreement No 957338
-
 # Feasible scenarios of a use case
 
 Decentralized EV sharing (DEVs) is a fully decentralized platform for electric vehicles sharing, based on blockchain and semantic technologies. Thanks to a detailed semantic description of vehicles, service providers can register their cars, scooters, or bikes in the system and users can exploit them for their needs. The blockchain technology ensures a fair and trusted exchange of services thanks to Smart Contracts and IoT Oracles.
@@ -50,4 +46,8 @@ The customer engagement solution involves CO2 tokens for users that choose the p
 2. Facilities: touristic facilities reserve a part of the community driven fleet for their own users as an additional service included in their offering. Facilities can customize fleet behavior and management. 
 3. Suppliers: users or organizations can register their devices and set a fair price per hour on-chain and they become part of the fleet. When users or facilities rent their vehicles, suppliers are paid accordingly. 
 
+
 ![NGI](imgs/logo-ngi-ontochain.png)
+
+### Acknowledgements
+This project has received funding from the European Union’s Horizon 2020 research and innovation program through the NGI ONTOCHAIN program under cascade funding agreement No 957338
