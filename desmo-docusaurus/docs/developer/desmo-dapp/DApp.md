@@ -76,7 +76,7 @@ In that test we use *linksmart* repository to create and lunch some Directories.
 In order to use the *linksmart*, we have to install *GO*.
 Download and install GO from [go.dev](https://go.dev/dl/).
 
-After you test that GO is working on your local machine, you have to donwload, setup, and run the *linksmart* repository:
+After you test that GO is working on your local machine, you have to download, setup, and run the *linksmart* repository:
 1. `cd ./linksmart-directory` 
 2. `./downloadRepo.sh`
 3. `cd ./directoryManager` 
@@ -87,7 +87,7 @@ The next step is to install the global npm dependency that the DApp needs.
 1. `cd ./DApp` 
 2. `npm install -g ts-node typescript '@types/node'`
 
-Now, you have all the services that are require to run the use-case test.
+Now, you have all the services that are required to run the use-case test.
 
 **RUN TEST**
 Here we will run the use-case test, considering all the services previously configured not running.
