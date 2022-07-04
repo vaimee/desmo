@@ -7,3 +7,9 @@
 [submodule "desmo-dapp"]
 	path = desmo-dapp
 	url = https://github.com/vaimee/desmo-dapp.git
+[submodule "desmo-sdk"]
+	path = desmo-sdk
+	url = https://github.com/vaimee/desmo-sdk.git
+[submodule "desmo-front"]
+	path = desmo-front
+	url = https://github.com/vaimee/desmo-front.git
