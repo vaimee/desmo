@@ -16,7 +16,7 @@ The following schema represent an hex string, where
 4. **ps** is the size of the hex char used to represent **precision**.
 5. **precision** is an integer that represents the precision of the floating-point of the number.
 
-![ManualEncoding](../../imgs/dapp_ManualEncoding.png)
+![ManualEncoding](../../../imgs/dapp_ManualEncoding.png)
 
 Example: 
 

@@ -4,6 +4,8 @@ sidebar_position: 1
 # Introduction
 ![DESMO-LD](imgs/desmo-logo.png)
 
+DESMO-LD is a decentralized oracle for IoT data powered by WoT technologies. Through our system, client smart contracts and DApps can access off-chain data produced by a network of sensors and other IoT devices. In addition, our system also supports the possibility for a client to activate a specific action on an actuator: this feature allows the creation of new types of contracts and applications that, upon the occurrence of certain conditions, can interact directly with the real world by changing its state. In both cases, the system provides geospatial queries capabilities to the clients; these features are fundamental for an oracle that works in close contact with the physical world. Shifting the focus to the data source side, DESMO-LD uses the W3C WoT standard as an interoperability layer. Specifically, the devices are brought into the oracle network through specialized nodes of TDDs: their job is to resolve the queries from clients in exchange for a reward in tokens. TDDs are also responsible for controlling the quality of the hosted TDs so that they always provide the highest quality data to the rest of the system. One of the primary goals of our solution is to provide a “full-stack” decentralized oracle that distributes both the computing part and data sources. For this reason, we decided to base our architecture on the iExec infrastructure and to delegate the management of the TDDs to third parties that are not necessarily linked with VAIMEE.
+
 The DESMO-LD project aims to provide a fully integrated distributed solution for consuming IoT external data, enriched with Web of Things semantics and data model, inside the ONTOCHAIN. This addresses the ONTOCHAIN call's objectives of designing new trustful decentralized Oracles to poll semantic data from off-chain data sources. Besides, DESMO-LD introduces novel strategies to solve the known interoperability problems thanks to the heavy deployment of standard ontology and semantic oriented consensus algorithms for data quality and trustiness.
 
 # Architecture
@@ -33,8 +35,19 @@ interoperable connection layer with heterogeneous IoT systems and devices;
 - Provide trustable means to induce real world effects thanks to attenuation APIs;
 - Native support for geolocation queries and data.
 
+# Feasible scenarios of a use case
+
+Decentralized EV sharing (DEVs) is a fully decentralized platform for electric vehicles sharing, based on blockchain and semantic technologies. Thanks to a detailed semantic description of vehicles, service providers can register their cars, scooters, or bikes in the system and users can exploit them for their needs. The blockchain technology ensures a fair and trusted exchange of services thanks to Smart Contracts and IoT Oracles.
+
+Within the circular economy framework, possible customers of vehicles sharing (as car and scooter) are young and active people looking for a eco-friendly and low-cost means to move across cities and surroundings, tourist facilities (such as hotels, B&Bs, and restaurants) that want to provide mobility service to their customers without having to invest in and maintaining a fleet of vehicles, and users or private organizations who want to share their own vehicles with the community in exchange for a profit .
+The customer engagement solution involves CO2 tokens for users that choose the platform for their travels, together with a reputation system and score based rewards. Moreover, the suppliers of the vehicle can repay the initial investment for the vehicle fleet. Part of the transaction fees of each user payment will cover the insurance for vehicle suppliers while the residual part will become profit. 
+
+1. Users : a user is seeking a vehicle and through the DApp he/she can visualize a list of the vehicles nearby and the user chooses accordingly. The user stakes some tokens for reserving the vehicle for a certain amount of time. The on-chain protocol unlocks the vehicle only after the payment is verified. Then the user is allowed to reach the destination. Eventually, the process is concluded and the tokens are distributed between the parties. In this final phase penalties and bonuses are calculated and applied. 
+2. Facilities: touristic facilities reserve a part of the community driven fleet for their own users as an additional service included in their offering. Facilities can customize fleet behavior and management. 
+3. Suppliers: users or organizations can register their devices and set a fair price per hour on-chain and they become part of the fleet. When users or facilities rent their vehicles, suppliers are paid accordingly. 
+
+
+![NGI](imgs/logo-ngi-ontochain.png)
 
 ### Acknowledgements
 This project has received funding from the European Union’s Horizon 2020 research and innovation program through the NGI ONTOCHAIN program under cascade funding agreement No 957338
-
-![NGI](imgs/logo-ngi-ontochain.png)

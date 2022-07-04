@@ -1,8 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
 # Smart Contracts
-![DESMO-LD](./imgs/desmo-logo.png)
+![DESMO-LD](../imgs/desmo-logo.png)
 
 The Desmo-LD iExecDOracle is a Smart contract that implements the IExec INTERFACE_NAME. Its purpose is to serve as the main API entrypoint for client Smart Contracts. Additionally, to the IExec API, the DESMO-LD iExecDOracle will implement the logic to randomly select a set of valid Thing Description Directories registered in the DESMO-LD Hub. The APIs will serve on-chain clients with endpoints that can search for a device inside the DESMO-LD network of Thing Description Directories, get sensor data, invoke operations on remote sensors and finally subscribe to events.
 

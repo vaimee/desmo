@@ -1,0 +1,8 @@
+{
+  "label": "Development details",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "The whole development details of the various components of the system. If you are interested in the specification and the use of each of these components the following sections can help you."
+  }
+}
