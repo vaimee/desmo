@@ -1,8 +1,14 @@
 ![DESMO-LD](./imgs/desmo-logo.png)
 
-The DESMO-LD project aims to provide a fully integrated distributed solution for consuming IoT external data, enriched with Web of Things semantics and data model, inside the ONTOCHAIN. This addresses the ONTOCHAIN call's objectives of designing new trustful decentralized Oracles to poll semantic data from off-chain data sources. Besides, DESMO-LD introduces novel strategies to solve the known interoperability problems thanks to the heavy deployment of standard ontology and semantic oriented consensus algorithms for data quality and trustiness.
+<a href="https://github.com/vaimee/desmo/issues" target="_blank"><img src="https://img.shields.io/github/issues/vaimee/desmo.svg?style=flat-square" alt="Issues" /></a>
+<a href="https://github.com/vaimee/desmo/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/github/license/vaimee/desmo.svg?style=flat-square" alt="License" /></a>
+<a href="https://discord.gg/B7WZswnH" target="_blank"><img src="https://img.shields.io/badge/Discord-7289DA?style=flat-square&logo=discord&logoColor=white&label=desmo" alt="Discord chat" /></a>
+<a href="https://www.linkedin.com/company/vaimee/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&color=blue" alt="LinkedIn" /></a>
+# Desmo - A DEcentralized SMart Oracle for the Internet of Things
+**Overview**
+> The DESMO-LD project aims to provide a fully integrated distributed solution for consuming IoT external data, enriched with Web of Things semantics and data model, inside the ONTOCHAIN. This addresses the ONTOCHAIN call's objectives of designing new trustful decentralized Oracles to poll semantic data from off-chain data sources. Besides, DESMO-LD introduces novel strategies to solve the known interoperability problems thanks to the heavy deployment of standard ontology and semantic oriented consensus algorithms for data quality and trustiness.
 
-# Architecture
+## Architecture
 DESMO-LD is a Decentralized Oracle for IoT data powered by WoT technologies. The system architecture is divided between an on-chain part, consisting of a set of smart contracts, and an off-chain part with the Oracle DApp and the Web of Things Thing Description Directory (TDD). The project structure is consequently organized as follows:
 - [Smart Contracts](https://github.com/vaimee/desmo-contracts/blob/55cf7b0dec88ca211250b0a95a67a6bcffad89ee/README.md)
 - [Oracle DApp](https://github.com/vaimee/desmo-dapp/blob/bea690443eb16dbc563f6c0c5d3f391d8587038a/README.md)
@@ -21,7 +27,7 @@ The on-chain part is strictly connected to the development of a decentralized ne
 
 The off-chain part is linked to the [Web of Thing]( https://www.w3.org/WoT/) functionality and technologies. Value is created by accessing a constant real-time stream of quality IoT data from the WoT. Moreover, it features a ranking system able to assess data sources' quality to de-incentives bad or unfair behaviour. Data streamed are organized and defined in [Thing Description](https://www.w3.org/TR/2020/REC-wot-thing-description-20200409/) which manifest the interactions affordances among IoT devices or services. The generated value is enhanced through the automatic rewarding of the possessors of WTs devices that the architecture guarantee.
 
-# Main Innovation
+## Main Innovation
 The DESMO-LD project will focus on a trusted decentralized oracle system to reliably
 consume IoT data from on-chain Smart Contracts. The main innovation points consists:
 - Leverage on [WoT interaction model](https://www.w3.org/TR/2020/REC-wot-architecture-20200409/) and [WoT ontology](https://www.w3.org/2019/wot/td) for implementing an
