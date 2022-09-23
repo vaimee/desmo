@@ -1,4 +1,5 @@
-![DESMO-LD](./imgs/desmo-logo.png)
+<img src="./imgs/desmo-logo.png" width="40%" alt='DESMO'/>
+
 
 <a href="https://github.com/vaimee/desmo/issues" target="_blank"><img src="https://img.shields.io/github/issues/vaimee/desmo.svg?style=flat-square" alt="Issues" /></a>
 <a href="https://github.com/vaimee/desmo/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/github/license/vaimee/desmo.svg?style=flat-square" alt="License" /></a>
