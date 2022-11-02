@@ -144,3 +144,19 @@ At least select as a result the value with more score.
 # Algorithm on boolean
 
 Convert the boolean to string and then use "Algorithm on stings (V2)".
+
+# Directory reward system
+
+The score for a Directory is a number between 0 and 3.
+
+We refer to best-value as the final value of the Consensus Algorithms.
+
+All the sources will start with a maximum score of 3. If a source will be punished the score will be set to 0 and can't be increased anymore.
+The Directory that will provide the value selected by the Consensus Algorithms (best-value) will has a score of 3.
+The Directories that will provide valid values, but not one of them is equal to the best-value will be rewarded with a score of 1, and the Directories that will provide at least one value that is equal to best-value will be rewarded with a score of 2.
+
+In conclusion, a Directory will has:
+- score 0 for punishment, returned not a valid value, or not responding.
+- score 1 if the Directory is not punished, all values returned are valid.
+- score 2 if the Directory returns the best-value among its values.
+- score 3 if the Directory is the one that wins the Consensus Algorithms.
