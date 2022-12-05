@@ -1,10 +1,11 @@
-![DESMO-LD](./imgs/desmo-logo.png)
+<img src="./imgs/desmo-logo.png" width="40%" alt='DESMO'/>
 
+# A DEcentralized SMart Oracle for the Internet of Things
 <a href="https://github.com/vaimee/desmo/issues" target="_blank"><img src="https://img.shields.io/github/issues/vaimee/desmo.svg?style=flat-square" alt="Issues" /></a>
 <a href="https://github.com/vaimee/desmo/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/github/license/vaimee/desmo.svg?style=flat-square" alt="License" /></a>
 <a href="https://discord.gg/B7WZswnH" target="_blank"><img src="https://img.shields.io/badge/Discord-7289DA?style=flat-square&logo=discord&logoColor=white&label=desmo" alt="Discord chat" /></a>
 <a href="https://www.linkedin.com/company/vaimee/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&color=blue" alt="LinkedIn" /></a>
-# Desmo - A DEcentralized SMart Oracle for the Internet of Things
+
 **Overview**
 > The DESMO-LD project aims to provide a fully integrated distributed solution for consuming IoT external data, enriched with Web of Things semantics and data model, inside the ONTOCHAIN. This addresses the ONTOCHAIN call's objectives of designing new trustful decentralized Oracles to poll semantic data from off-chain data sources. Besides, DESMO-LD introduces novel strategies to solve the known interoperability problems thanks to the heavy deployment of standard ontology and semantic oriented consensus algorithms for data quality and trustiness.
 
@@ -42,7 +43,7 @@ To deploy the DESMO-LD system, start by cloning the repository:
 git clone --recurse-submodules https://github.com/vaimee/desmo
 ```
 
-After the command you should see all the repositories on your local desmo folder.
+After the command you should see all the repositories on your local Desmo folder.
 Notice, as git submodule works, all the cloned repositories will be not at their latest
 main branch commit. We are manually update git submodule references to keep
 everything updated, but in case you need to fetch the latest commit, follow the next
@@ -55,7 +56,7 @@ git checkout main
 git pull
 ```
 
-At this point you should have all the latest changes on your local machine. We can now proceed with the deployment.
+Remember to do that procedure for each Desmo module. At this point you should have all the latest changes on your local machine. We can now proceed with the deployment.
 
 ### Prerequisites
 - [Docker](https://docs.docker.com/get-docker/)
@@ -109,7 +110,85 @@ To use your own contracts, you have also to update all the imports in the `desmo
 npm run build
 ```
 
+The SDK is now ready to be used. You can publish it to npm as well:
+1. Rename the package inside the `package.json` file, use your npm handle and set the `name` property to `@<yournpmuser>/desmo-sdk`.
+2. Publish it to npm: `npm run publish --access public`
+
 ### Deploying the DApp
+
+The DApp is a IExec applications that interact with the smart contracts and the Thing Description Directories. [DApp readme](./desmo-dapp/README.md) contains some deployment information too, but refer to this guide to have a complete overview of the deployment process. To start deploying the DApp, run the following commands:
+
+```bash
+cd desmo-dapp/DApp
+npm ci
+```
+
+Now install the Desmo SDK you have just published:
+```bash
+npm un @vaimee/desmo-sdk
+npm i @<yournpmuser>/desmo-sdk
+```
+
+Don't forget to update the imports in the `desmo-dapp/DApp/src` folder. Simply look for the `@vaimee/desmo-sdk` package imports and replace it with `@<yournpmuser>/desmo-sdk`. Now you can verify if the imports are correct by running the following command:
+
+```bash
+npm run build
+```
+
+After you [set up your wallet](./desmo-dapp/DApp#Setting_your_wallet), you can deploy the DApp to the Iexec marketplace. To do so start from building and publish the docker image of the DApp:
+
+```bash
+npm run docker_build
+
+# replace <your_docker_username> with your docker username
+docker tag desmo-dapp <your_docker_username>/desmo-dapp:<version>
+# push the image to docker hub
+docker push <your_docker_username>/desmo-dapp:<version>
+```
+
+Copy the checksum of the docker image in the file `iexec.json` under `app.checksumm`.
+Check the `app.multiaddr` and `app.owner`  of the same file, they need to corrispond to the URL of your docker hum image and your wallet address respectively. Now you can deploy the DApp to the Iexec marketplace:
+
+```bash
+npm run onchain_deploy
+
+# Set up the order of the DApp
+npx iexec order init --app
+npx iexec order sign --app
+npx iexec order publish --app
+```
+
+Now the DApp is ready to be used. *Note* the [deployed.json](./desmo-dapp/DApp/deployed.json) file contains the DApp address. You can use this address to configure the other components of the system. Finally, you have to deploy the frontend.
+
+### Deploying the Desmo Frontend
+
+The Desmo frontend is a Angular application that allows you to interact with the DApp, the contracts and the Thing Description Directory. To deploy the frontend, start with the following commands:
+
+```bash
+cd desmo-frontend
+npm ci
+```
+
+Now you have to configure the frontend to use the deployed DApp and contracts. To do so, open the `desmo-frontend/src/environments/environment.ts` file and set the `iExecDAppAddress` property to the address of the DApp you have just deployed. Moreover, install the Desmo SDK you have published in the previous steps:
+
+```bash
+npm un @vaimee/desmo-sdk
+npm i @<yournpmuser>/desmo-sdk
+```
+
+Don't forget to update the imports in the `desmo-dapp/DApp/src` folder. Simply look for the `@vaimee/desmo-sdk` package imports and replace it with `@<yournpmuser>/desmo-sdk`. Now you can verify if the imports are correct by running the following command:
+
+```bash
+npm run build
+```
+
+If everything is correct, you can deploy the frontend to a web server. You can use the following command to start a local web server:
+
+```bash
+npm run start
+```
+
+The frontend is now ready, you can head to https://localhost:4200 to use it. 
 
 ### Acknowledgements
 This project has received funding from the European Union’s Horizon 2020 research and innovation program through the NGI ONTOCHAIN program under cascade funding agreement No 957338
