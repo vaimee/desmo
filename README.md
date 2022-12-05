@@ -35,6 +35,81 @@ interoperable connection layer with heterogeneous IoT systems and devices;
 - Provide trustable means to induce real world effects thanks to attenuation APIs;
 - Native support for geolocation queries and data.
 
+## Deployment
+
+To deploy the DESMO-LD system, start by cloning the repository:
+```bash
+git clone --recurse-submodules https://github.com/vaimee/desmo
+```
+
+After the command you should see all the repositories on your local desmo folder.
+Notice, as git submodule works, all the cloned repositories will be not at their latest
+main branch commit. We are manually update git submodule references to keep
+everything updated, but in case you need to fetch the latest commit, follow the next
+procedure:
+
+```bash
+cd ${submodule_folder}
+git fetch origin
+git checkout main
+git pull
+```
+
+At this point you should have all the latest changes on your local machine. We can now proceed with the deployment.
+
+### Prerequisites
+- [Docker](https://docs.docker.com/get-docker/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+- [Node.js 16+](https://nodejs.org/en/download/)
+- [npm 7+](https://www.npmjs.com/get-npm)
+
+### Deploying the Smart Contracts
+
+The smart contracts are deployed using the [Hardhat](https://hardhat.org/) framework. To deploy the contracts, run the following commands:
+
+```bash
+cd desmo-contracts
+npm ci
+npm run build
+npm run deploy
+```
+
+After the last command, you should see the new contract addresses printed on the console. Those addresses are also saved in the `desmo-contracts/deployed.json` file. You can use those addresses to configure the other components of the system. Now you can register the minimum number of Thing Description Directories required to start the system. To do so, run the following command:
+
+```bash
+npm run deploy:init
+```
+
+Currently, the script register 4 TDDs that are managed by VAIMEE. You can change this behavior by modifying the `desmo-contracts/hardhat.config.ts` file (check the `RegisterTDDs` hardhat script). Now the contracts are ready to be used. To integrate them into the other system components it is useful to published them as a npm package. Before doing so you have to change the name of the package inside the `package.json`. Use your npm handle and set the `name` property to `@<yournpmuser>/desmo-contracts`. Then you can publish it to npm:
+
+```bash
+npm run publish --access public
+```
+
+You can start deploying the other components of the system, but before that you have to configure the SDK to use the deployed contracts.
+
+### Deploying the Desmo SDK
+
+The Desmo SDK is a TypeScript library that allows you to interact with the deployed smart contracts and the DApp. To deploy and configure the SDK, run the following commands:
+
+```bash
+cd desmo-sdk
+npm ci
+```
+
+Now you have to configure the SDK to use the deployed contracts. It is pretty simple, just uninstall the `@vaimee/desmo-contracts` package and install the one you just published:
+
+```bash
+npm un @vaimee/desmo-contracts
+npm i @<yournpmuser>/desmo-contracts
+```
+
+To use your own contracts, you have also to update all the imports in the `desmo-sdk/src` folder. Look for the `@vaimee/desmo-contracts` package imports and replace it with `@<yournpmuser>/desmo-contracts`. Now you can build the SDK:
+```bash
+npm run build
+```
+
+### Deploying the DApp
 
 ### Acknowledgements
 This project has received funding from the European Union’s Horizon 2020 research and innovation program through the NGI ONTOCHAIN program under cascade funding agreement No 957338
